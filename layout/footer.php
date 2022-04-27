@@ -34,7 +34,7 @@ $(document).ready(function(){
                 }else if(resp == 'Error'){
                     $('#uploadStatus').html('<p style="color:#EA4335;">Please select a valid file to upload.</p>');
                 }
-                setTimeout(location.reload.bind(location), 3000);
+                setTimeout(location.reload.bind(location), 2000);
             }
         });
     });
