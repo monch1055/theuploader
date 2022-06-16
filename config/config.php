@@ -14,5 +14,5 @@ define('WEBSITE',ROOT.'/layout/');
 require_once CLASSES_FOLDER.'myDBClass.php';
 require_once CLASSES_FOLDER.'contentsClass.php';
 
-$mysqli = new dbClass();
-$contents = new contents();
+$mysqli = new dbClass(); /* Base DB Class */
+$contents = new contents(); /* Base Contents Class */
