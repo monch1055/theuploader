@@ -1,4 +1,4 @@
-# theuploader
+# theuploader. A simple system to upload an excel list, parse the contents and save it to the database
 Upload a valid Excel File. Parse and save contents in a table.
 
 #Setup
