@@ -9,8 +9,12 @@ else:
     if( isset($_POST['login']) ):
         $details = [ $_POST['email'], md5($_POST['password']) ];
         $result = $contents->loginUser($details);
-        $_SESSION['loggedUser'] = json_encode([ 'name'=>$result['name'], 'username'=>$result['email'], 'uid'=>$result['id'] ]);
-        header('Location:/');
+        if( count($result) > 0 ):
+            $_SESSION['loggedUser'] = json_encode([ 'name'=>$result['name'], 'username'=>$result['email'], 'uid'=>$result['id'] ]);
+            header('Location:/');
+        else:
+            echo '<script type="text/javascript">alert("This user is not registered.");location.href="index.php";</script>';
+        endif;
     endif;
 
     /* Upload via AJAX */
